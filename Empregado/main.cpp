@@ -8,16 +8,28 @@ int main(void){
     Empregado* e1 = new Empregado();
     Empregado* e2 = new Empregado();
 
-    e1->setNome("");
-    e1->setSobrenome("\n");
-    e1->setSalario(-1);
+    char nome[100], sobrenome[100];
+    float s;
+    
+    cin >> nome;
+    e1->setNome(nome);
+    cin >> sobrenome;
+    e1->setSobrenome(sobrenome);
+    cin >> s;
+    e1->setSalario(s);
 
     cout << "Empregado 1\n" << "Nome : " << e1->getNome() << endl << "Sobrenome : " << 
     e1->getSobrenome() << endl << "Salario : " << e1->getSalario() << endl << endl; 
 
-    e2->setNome("Arthur");
-    e2->setSobrenome("Ruan");
-    e2->setSalario(50);
+    cout << "\nSalario com aumento de 10% : " << e1->getSalario() * 1.1 << endl 
+    << "Novo salario anual: " << e1->getSalario() * 1.1 * 12 << endl;
+
+    cin >> nome;
+    e2->setNome(nome);
+    cin >> sobrenome;
+    e2->setSobrenome(sobrenome);
+    cin >> s;
+    e2->setSalario(s);
 
     cout << "Empregado 2\n" << "Nome : " << e2->getNome() << endl << "Sobrenome : " << 
     e2->getSobrenome() << endl << "Salario mensal: " << e2->getSalario() << endl 

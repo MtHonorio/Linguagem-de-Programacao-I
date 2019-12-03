@@ -1,4 +1,4 @@
-#ifndef CONTROLEDEGASTOS_H
+#pragma once
 #define CONTROLEDEGASTOS_H
 #include <iostream>
 #include "Despesa.h"
@@ -16,5 +16,3 @@ class ControleDeGastos{
     private:
         Despesa despesas[10];
 };
-
-#endif // CONTROLEDEGASTOS_H

@@ -1,4 +1,4 @@
-#ifndef PAGAMENTO_H
+#pragma once 
 #define PAGAMENTO_H
 #include <iostream>
 
@@ -19,5 +19,3 @@ class Pagamento{
         string nomeDoFuncionario;
 
 };
-
-#endif // PAGAMENTO_H

@@ -9,11 +9,18 @@ int main(void){
     Pagamento* p1 = new Pagamento();
     Pagamento* p2 = new Pagamento();
 
-    p1->setValorPagamento(5000);
-    p1->setNomeDoFuncionario("Arthur Ruan");
+    string nome;
+    float pag;
 
-    p2->setValorPagamento(2000);
-    p2->setNomeDoFuncionario("Lucas");
+    cin >> pag;
+    p1->setValorPagamento(pag);
+    cin >> nome;
+    p1->setNomeDoFuncionario(nome);
+
+    cin >> pag;
+    p2->setValorPagamento(pag);
+    cin >> nome;
+    p2->setNomeDoFuncionario(nome);
 
 
     cout << "\nNome: " << p1->getNomeDoFuncionario() << endl << "Pagamento: " << p1->getValorPagamento() << endl;
@@ -26,7 +33,8 @@ int main(void){
 
     cout << "\nTotal de Pagamentos efetuados: " << c1->calculaTotalDePagamentos() << endl;
 
-    if(c1->exitePagamentoParaFuncionario("Arthur Ruan")){
+    cin >> nome;
+    if(c1->exitePagamentoParaFuncionario(nome)){
         cout << "Pagamento realizado.\n";
     }else{
         cout << "Pagamento nao existente.\n";

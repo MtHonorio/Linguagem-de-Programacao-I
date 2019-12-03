@@ -8,12 +8,19 @@ int main(){
     
     Despesa* d1 = new Despesa();
     Despesa* d2 = new Despesa();
-    
-    d1->setTipoDeGasto("Computador");
-    d1->setValor(1750);
 
-    d2->setTipoDeGasto("mouse");
-    d2->setValor(43.70);
+    string item;
+    double valor;
+
+    cin >> item;
+    cin >> valor;    
+    d1->setTipoDeGasto(item);
+    d1->setValor(valor);
+
+    cin >> item;
+    cin >> valor; 
+    d2->setTipoDeGasto(item);
+    d2->setValor(valor);
 
     ControleDeGastos* c1 = new ControleDeGastos();
 
@@ -29,7 +36,8 @@ int main(){
 
     cout << "Total de despesas: " << c1->calculaTotalDeDespesas() << endl;
 
-    if(c1->existeDespesaDoTipo("Computador")){
+    cin >> item;
+    if(c1->existeDespesaDoTipo(item)){
         cout << "Produto existente";
     }else{
         cout << "Produto nao existe";

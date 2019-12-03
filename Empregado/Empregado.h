@@ -1,4 +1,4 @@
-#ifndef EMPREGADO_H
+#pragma once
 #define EMPREGADO_H
 #include <iostream>
 
@@ -23,5 +23,3 @@ class Empregado{
         string sobrenome;
         double salario;
 };
-
-#endif // EMPREGADO_H

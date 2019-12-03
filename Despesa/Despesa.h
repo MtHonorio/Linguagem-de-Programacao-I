@@ -1,4 +1,4 @@
-#ifndef DESPESA_H
+#pragma once
 #define DESPESA_H
 #include <iostream>
 
@@ -19,5 +19,3 @@ class Despesa{
         string tipoDeGasto;
 
 };
-
-#endif // DESPESA_H

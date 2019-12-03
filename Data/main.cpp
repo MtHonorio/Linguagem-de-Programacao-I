@@ -12,16 +12,32 @@ int main(void){
     d1->setMes(-5);
     d1->setAno(-10);
 
-    printf("Data invalida : %02d/%02d/%04d\n", d1->getDia(), d1->getMes(), d1->getAno());
+    printf("Data valida : %02d/%02d/%04d\n", d1->getDia(), d1->getMes(), d1->getAno());
 
-    d1->setDia(31);
-    d1->setMes(12);
-    d1->setAno(2019);
+    char c;
+    int d, m, a;
+    cout << "Qual o Dia de hoje?" << endl;
+    cin >> d;
+    d1->setDia(d);
 
-    for(int i = 0; i < 31; i++){
-        printf("Data Avanca : %02d/%02d/%04d\n", d1->getDia(), d1->getMes(), d1->getAno());
-        d1->AvancarDia();
-    }
+    cout << "Qual o Mes?" << endl;
+    cin >> m;
+    d1->setMes(m);
+
+    cout << "Qual o Ano?" << endl;
+    cin >> a;
+    d1->setAno(a);
     
+    printf("Dia atual : %02d/%02d/%04d\n", d1->getDia(), d1->getMes(), d1->getAno());
+
+    cout << "Deseja avancar dia? [S/n]" << endl;
+    cin >> c;
+    if (c == 'S' || c == 's'){
+        d1->AvancarDia();
+        printf("Data Avanca : %02d/%02d/%04d\n", d1->getDia(), d1->getMes(), d1->getAno());
+        
+    }
+    else{
+        return 0;}
     return 0;
 }

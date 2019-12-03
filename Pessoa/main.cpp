@@ -5,13 +5,26 @@ using namespace std;
 
 int main(void){
 
-    Pessoa* p1 = new Pessoa("Arthur");
-    Pessoa* p2 = new Pessoa("Ruan", 18, "8750-9982");
+    char telefone[12];
+    int idade;
+    string nome;
+
+    cin >> nome;
+    Pessoa* p1 = new Pessoa(nome);
+
+    cin >> nome;
+    cin >> idade;
+    cin >> telefone;
+    Pessoa* p2 = new Pessoa(nome, idade, telefone);
 
     cout << "\nNome: " << p1->getNome() << endl << "Idade: " << p1->getIdade() << endl << "Telefone: " << p1->getTelefone() << endl << endl;
+    cout << "\nNome: " << p2->getNome() << endl << "Idade: " << p2->getIdade() << endl << "Telefone: " << p2->getTelefone() << endl << endl;
 
-    p1->setIdade(19);
-    p1->setTelefone("987935160");
+
+    cin >> idade;
+    cin >> telefone;
+    p1->setIdade(idade);
+    p1->setTelefone(telefone);
 
     cout << "Nome: " << p1->getNome() << endl << "Idade: " << p1->getIdade() << endl << "Telefone: " << p1->getTelefone() << endl << endl;
 

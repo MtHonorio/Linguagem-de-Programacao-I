@@ -1,4 +1,4 @@
-#ifndef DATA_H
+#pragma once
 #define DATA_H
 
 using namespace std;
@@ -21,5 +21,3 @@ class Data{
         void AvancarDia();
 
 };
-
-#endif // DATA_H

@@ -1,4 +1,4 @@
-#ifndef INVOICE_H
+#pragma once
 #define INVOICE_H
 
 using namespace std;
@@ -27,4 +27,3 @@ class Invoice
         double preco;
 };
 
-#endif // INVOICE_H

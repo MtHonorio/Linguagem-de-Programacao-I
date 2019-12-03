@@ -1,4 +1,4 @@
-#ifndef CONTROLEDEPAGAMENTO_H
+#pragma once
 #define CONTROLEDEPAGAMENTO_H
 #include <iostream>
 #include "Pagamento.h"
@@ -15,5 +15,3 @@ class ControleDePagamento{
     private:
         Pagamento pagamentos[10];
 };
-
-#endif // CONTROLEDEPAGAMENTO_H
